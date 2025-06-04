@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevar Accounting - Smart, Modern Accounting Solutions</title>
+    <link rel="shortcut icon" href="/fevi.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#3b82f6',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+       
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        @media (max-width: 768px) {
+           
+            #navbar{
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h1 class="text-2xl font-bold text-white" id="logo-text">Elevar Accounting</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-accent transition duration-300 font-medium">Home</a>
+                    <a href="#about" class="text-white hover:text-accent transition duration-300 font-medium">About</a>
+                    <a href="#services" class="text-white hover:text-accent transition duration-300 font-medium">Services</a>
+                    <a href="#contact" class="text-white hover:text-accent transition duration-300 font-medium">Contact</a>
+                    <button class="bg-accent text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 font-semibold shadow-lg">
+                        Get Started
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden glass-effect">
+            <div class="px-4 pt-4 pb-6 space-y-4">
+                <a href="#home" class="block text-white hover:text-accent font-medium">Home</a>
+                <a href="#about" class="block text-white hover:text-accent font-medium">About</a>
+                <a href="#services" class="block text-white hover:text-accent font-medium">Services</a>
+                <a href="#contact" class="block text-white hover:text-accent font-medium">Contact</a>
+                <button class="w-full bg-accent text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 font-semibold">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center gradient-bg hero-pattern overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div style="max-width: 1500px;" class="relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 text-white">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center px-4 py-2 bg-white bg-opacity-10 rounded-full text-sm font-medium backdrop-blur-sm">
+                            <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                            Trusted by 500+ Businesses
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                            Smart, Modern
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
+                                Accounting
+                            </span>
+                            Solutions
+                        </h1>
+                        <p class="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+                            Customized for Business Owners, Startups, Accountants & CPAs
+                        </p>
+                        <p class="text-lg text-blue-200 font-medium">
+                            Turning your financials into business wins
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="group bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
+                            Start Free Consultation
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <a href="" class="glass-effect text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:bg-opacity-20 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-play mr-3"></i>
+                            Watch Demo
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">500+</div>
+                            <div class="text-blue-200 text-sm">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">99%</div>
+                            <div class="text-blue-200 text-sm">Accuracy Rate</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white"><span>24</span>/<span>7</span> </div>
+                            <div class="text-blue-200 text-sm">Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Dashboard Mockup -->
+                <div style="zoom: 1.2;" class="relative">
+                    <div class="relative z-10">
+                        <!-- Main Dashboard -->
+                        <div class="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-xl font-bold text-gray-800">Financial Dashboard</h3>
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Chart Area -->
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-4 mb-4">
+                                <div class="flex items-end justify-between h-32 space-x-2">
+                                    <div class="bg-accent w-8 h-16 rounded-t"></div>
+                                    <div class="bg-blue-400 w-8 h-24 rounded-t"></div>
+                                    <div class="bg-accent w-8 h-20 rounded-t"></div>
+                                    <div class="bg-blue-400 w-8 h-28 rounded-t"></div>
+                                    <div class="bg-accent w-8 h-18 rounded-t"></div>
+                                    <div class="bg-blue-400 w-8 h-32 rounded-t"></div>
+                                    <div class="bg-accent w-8 h-22 rounded-t"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Metrics -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <div class="text-2xl font-bold text-green-600">$124K</div>
+                                    <div class="text-sm text-gray-600">Revenue</div>
+                                </div>
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <div class="text-2xl font-bold text-blue-600">$89K</div>
+                                    <div class="text-sm text-gray-600">Profit</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Cards -->
+                        <div class="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg p-4 transform -rotate-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Invoice Paid</div>
+                                    <div class="text-sm text-gray-600">$2,450</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 transform rotate-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-chart-pie text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Tax Saved</div>
+                                    <div class="text-sm text-gray-600">$12,300</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background Decoration -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-100 rounded-2xl transform rotate-6 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-accent font-semibold mb-4">
+                    About Lixance
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Powered by Excellence & Innovation
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're more than accountants – we're strategic partners invested in your long-term success
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Lixance is powered by a dynamic team of forward-thinking professionals committed to excellence and innovation. Today's businesses require more than accounting. They need strategic partners invested in their long-term success.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Driven by a shared vision to make a meaningful impact, we formed a team of experts committed to professionalism, excellence, and delivering measurable results.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="space-y-4 pt-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Expert Team</h4>
+                                <p class="text-gray-600">Certified professionals with years of experience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-rocket text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Innovation First</h4>
+                                <p class="text-gray-600">Cutting-edge technology and modern solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-handshake text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Partnership Approach</h4>
+                                <p class="text-gray-600">Long-term relationships built on trust</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Image -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
+                        <img src="https://cdn.vectorstock.com/i/500p/54/83/about-us-button-web-banner-templates-vector-54215483.jpg" alt="Professional team" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    </div>
+                    <!-- Floating Stats -->
+                    <div class="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent">15+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission, Vision, Values -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We empower businesses by delivering high-quality, technology-driven outsourcing solutions allowing our clients to focus on growth and success while we ensure excellence, efficiency, and trust in every partnership.
+                    </p>
+                </div>
+                
+                <div class="group bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our vision is to be the most trusted and forward-thinking outsourcing partner through ethical practices, cutting-edge solutions, and an enduring commitment to professionalism and measurable results.
+                    </p>
+                </div>
+                
+                <div class="group bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Values</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        At the core of our mission lies an unwavering dedication to delivering exceptional value to our clients through technology, ethical practices, trust, integrity, and excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-24 bg-gray-50 ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-accent font-semibold mb-4">
+                    Why Choose Us
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Why Choose Lixance?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    Empower your business with our top-tier accounting services. Our skilled professionals simplify complex financial scenarios by analyzing and delivering actionable insights that drive your business objectives.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">High-Value Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">We ensure actionable solutions and meaningful guidance to support your success with data-driven insights.</p>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Process Automation</h3>
+                    <p class="text-gray-600 leading-relaxed">Eliminate manual record-keeping. Implementing the right tools and integrating them can simplify workflow and boost efficiency.</p>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Expertise</h3>
+                    <p class="text-gray-600 leading-relaxed">Our experienced accountants possess years of expertise across various industries and software, making them the ideal team to assist you.</p>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Data Security</h3>
+                    <p class="text-gray-600 leading-relaxed">We understand the importance of protecting sensitive data, and we are committed to safeguarding it through rigorous security measures.</p>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-puzzle-piece text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Exclusive Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">We understand that every business is unique so are its needs. Collaborate with us to create a service package tailored to your business.</p>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Seamless Approach</h3>
+                    <p class="text-gray-600 leading-relaxed">Adapt business size as per needs without the need for adjusting workforce. Scale effortlessly with our flexible solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-accent font-semibold mb-4">
+                    Our Services
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Comprehensive Accounting Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    The business world moves so fast, and hence, proper bookkeeping and accounting management are important for growth. We offer comprehensive solutions for all your accounting needs.
+                </p>
+            </div>
+
+            <!-- Main Service Highlight -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 lg:p-12 mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">Bookkeeping & Accounting</h3>
+                        <h4 class="text-xl font-semibold text-accent">Outsourced Online Accounting Solutions for Business Growth</h4>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Financial management can be complex and time-consuming, especially when you're busy building your business. Our dedicated team takes care of the details, working efficiently behind the scenes.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">99% Accuracy Guaranteed</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Real-time Financial Updates</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://blog.planview.com/wp-content/uploads/2022/05/iStock-1293656833-1024x585.jpg" alt="Accounting dashboard" class="w-full h-80 object-cover rounded-2xl shadow-xl">
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-green-600"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Growth</div>
+                                    <div class="text-sm text-gray-600">+25%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-broom text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Bookkeeping Cleanup</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our cleanup and catch-up services correct inaccurate records and complete missed bookkeeping tasks, bringing your financial records up to date with precision.
+                    </p>
+                </div>
+
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-invoice text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Accounts Payable</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comprehensive outsourced solutions to simplify payment processes, track due dates, and maintain steady cash flow with timely payments.
+                    </p>
+                </div>
+
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-receipt text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Accounts Receivable</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Streamlined invoicing solutions to ensure smooth cash flow and prompt payment collection, keeping your financials in order.
+                    </p>
+                </div>
+
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">CFO Services</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Strategic financial guidance to develop solid strategies and overcome challenges like cash flow issues and managing tight margins.
+                    </p>
+                </div>
+
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Multiple Entities</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Handle complex multi-entity bookkeeping including inter-company transactions, multiple bank accounts, and consolidated statements.
+                    </p>
+                </div>
+
+                <div class="group bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Business Setup</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Guidance for new businesses in choosing the right software and processes for managing transactions and meeting reporting needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Expertise Section -->
+    <section class="py-24 bg-gray-50 ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-accent font-semibold mb-4">
+                    Software Expertise
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Industry-Leading Platforms
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our team specializes in end-to-end bookkeeping and financial management using the most trusted platforms in the industry.
+                </p>
+            </div>
+
+            <!-- Main Platforms -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">QuickBooks</h4>
+                    <p class="text-sm text-gray-600 mt-2">Complete accounting solution</p>
+                </div>
+                
+                <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-bar text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Xero</h4>
+                    <p class="text-sm text-gray-600 mt-2">Cloud-based accounting</p>
+                </div>
+                
+                <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-file-invoice-dollar text-purple-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">Bill.com</h4>
+                    <p class="text-sm text-gray-600 mt-2">Payment automation</p>
+                </div>
+                
+                <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-red-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900">ADP/Gusto</h4>
+                    <p class="text-sm text-gray-600 mt-2">Payroll management</p>
+                </div>
+            </div>
+
+            <!-- Industry-Specific Platforms -->
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Industry-Specific Solutions</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-store text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Shopify</h4>
+                            <p class="text-gray-600">Seamless ecommerce integration and support for online stores with automated sales data sync.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-gavel text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Clio</h4>
+                            <p class="text-gray-600">Legal practice management and accounting software designed for law firms with compliance features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-campground text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Campsite</h4>
+                            <p class="text-gray-600">Comprehensive campground and summer camp management from registration to finance tracking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-car text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Washify</h4>
+                            <p class="text-gray-600">Advanced POS system tailored for car wash businesses with membership and payment management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section class="py-24 bg-white ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full text-accent font-semibold mb-4">
+                    Industries We Serve
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Trusted Across Industries
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We offer professional bookkeeping services with proven experience across diverse industries, delivering tailored solutions for each sector.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+                <div class="group text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Startups</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Restaurants</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-store text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Franchises</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-gavel text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Law Firms</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shopping-cart text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Ecommerce</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Nonprofits</p>
+                </div>
+                
+                <div class="group text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-stethoscope text-white text-2xl"></i>
+                    </div>
+                    <p class="font-semibold text-gray-900">Healthcare</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 gradient-bg hero-pattern relative overflow-hidden hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 opacity-10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+            </h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+                Let us handle your accounting so you can focus on what matters most - growing your business and achieving your goals.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <button class="group bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
+                    Schedule Free Consultation
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <button class="glass-effect text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:bg-opacity-20 transition duration-300">
+                    Get Free Quote
+                </button>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-blue-100">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Free Consultation</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Secure</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-clock"></i>
+                    <span>Quick Setup</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-chart-line text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Elevar Accounting</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Smart, modern accounting solutions customized for business owners, startups, accountants, and CPAs. Your trusted partner for financial success.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Bookkeeping</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Accounting</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">CFO Services</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Tax Preparation</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Business Setup</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-accent"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-accent"></i>
+                            <span>info@elevaraccounting.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-accent"></i>
+                            <span>123 Business St, City, State</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-accent"></i>
+                            <span>Mon-Fri: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2024 Elevar Accounting. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
