@@ -5,34 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuButton = document.querySelector(".mobile-menu-button")
   const mobileMenu = document.querySelector(".mobile-menu")
 
-  // Enhanced navbar scroll effect
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("bg-white", "shadow-xl")
-      navbar.classList.remove("gradient-bg")
-      logoText.classList.remove("text-white")
-      logoText.classList.add("text-primary")
-
-      // Update nav links color
-      const navLinks = navbar.querySelectorAll("a:not(.mobile-menu a)")
-      navLinks.forEach((link) => {
-        link.classList.remove("text-white")
-        link.classList.add("text-gray-700")
-      })
-    } else {
-      navbar.classList.remove("bg-white", "shadow-xl")
-      navbar.classList.add("gradient-bg")
-      logoText.classList.add("text-white")
-      logoText.classList.remove("text-primary")
-
-      // Revert nav links color
-      const navLinks = navbar.querySelectorAll("a:not(.mobile-menu a)")
-      navLinks.forEach((link) => {
-        link.classList.add("text-white")
-        link.classList.remove("text-gray-700")
-      })
-    }
-  })
+ 
 
   // Mobile menu toggle
   mobileMenuButton.addEventListener("click", () => {

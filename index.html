@@ -36,12 +36,61 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+         #navbar{
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
 
         @media (max-width: 768px) {
            
             #navbar{
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            max-height: 600px;
+        }
+        .swiper-slide:hover img {
+            transform: scale(1.05);
+        }
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255,255,255,0.5);
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: white;
+            background: rgba(0,0,0,0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: rgba(0,0,0,0.5);
+            transform: scale(1.1);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -52,10 +101,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mr-3">
-                            <i class="fas fa-chart-line text-white text-xl"></i>
-                        </div>
-                        <h2 class="text-2xl font-bold text-white" id="logo-text">Lixance</h2>
+                         <img style="max-height: 60px;" src="/logo/logo.png" alt="">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -63,10 +109,11 @@
                     <a href="#about" class="text-white hover:text-accent transition duration-300 font-medium">About</a>
                     <a href="#services" class="text-white hover:text-accent transition duration-300 font-medium">Services</a>
                     <a href="#contact" class="text-white hover:text-accent transition duration-300 font-medium">Contact</a>
-                    <button class="bg-accent text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 font-semibold shadow-lg">
+                    <a href="#contact"  class="bg-accent text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 font-semibold shadow-lg">
                         Get Started
-                    </button>
+                    </a>
                 </div>
+                
                 <div class="md:hidden">
                     <button class="mobile-menu-button text-white">
                         <i class="fas fa-bars text-xl"></i>
@@ -81,9 +128,7 @@
                 <a href="#about" class="block text-white hover:text-accent font-medium">About</a>
                 <a href="#services" class="block text-white hover:text-accent font-medium">Services</a>
                 <a href="#contact" class="block text-white hover:text-accent font-medium">Contact</a>
-                <button class="w-full bg-accent text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 font-semibold">
-                    Get Started
-                </button>
+                 
             </div>
         </div>
     </nav>
@@ -163,6 +208,75 @@
         </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Carousel Container -->
+        <div class="swiper mySwiper rounded-2xl shadow-2xl overflow-hidden">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="https://cdn.prod.website-files.com/65effd8bb917b937e17119ef/6810ffa83bb7d946c30ae83a_3-stage-close.webp" alt="Nature">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQE0UnTUFMjVyg/article-cover_image-shrink_720_1280/B56ZYfSZpIHoAI-/0/1744281640352?e=2147483647&v=beta&t=N2nfrwcqe_sF9-niCCWxIVljcSgpwkA0oH56d-onhec" alt="City">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="https://prod.gusto-assets.com/media/900-x-450-Gusto-Images-Batch-2.jpg" alt="Mountains">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <img src="https://cdn.prod.website-files.com/644db584a95f116303972eda/66144d1062409a5a37c1403d_modern-accounting-firms.jpg" alt="Beach">
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <img src="https://imperiumdynamics.com/img/blog/blog-manage-IT-2.jpeg" alt="Forest">
+                </div>
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <img src="https://contentsnare.com/wp-content/uploads/2022/08/Top-10-accounting-firms-1024x576.jpg" alt="Architecture">
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Thumbnail Carousel -->
+    <div class="max-w-5xl mx-auto px-4 py-6">
+        <div class="swiper mySwiperThumbs rounded-xl shadow-lg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/65effd8bb917b937e17119ef/6810ffa83bb7d946c30ae83a_3-stage-close.webp" alt="Nature Thumbnail" class="rounded-lg">
+                </div>
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQE0UnTUFMjVyg/article-cover_image-shrink_720_1280/B56ZYfSZpIHoAI-/0/1744281640352?e=2147483647&v=beta&t=N2nfrwcqe_sF9-niCCWxIVljcSgpwkA0oH56d-onhec" alt="City Thumbnail" class="rounded-lg">
+                </div>
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://prod.gusto-assets.com/media/900-x-450-Gusto-Images-Batch-2.jpg" alt="Mountains Thumbnail" class="rounded-lg">
+                </div>
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://cdn.prod.website-files.com/644db584a95f116303972eda/66144d1062409a5a37c1403d_modern-accounting-firms.jpg" alt="Beach Thumbnail" class="rounded-lg">
+                </div>
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://imperiumdynamics.com/img/blog/blog-manage-IT-2.jpeg" alt="Forest Thumbnail" class="rounded-lg">
+                </div>
+                <div class="swiper-slide opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
+                    <img src="https://contentsnare.com/wp-content/uploads/2022/08/Top-10-accounting-firms-1024x576.jpg" alt="Architecture Thumbnail" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
     <!-- About Section -->
     <section id="about" class="py-24 bg-white ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,12 +340,7 @@
                         <img src="https://cdn.vectorstock.com/i/500p/54/83/about-us-button-web-banner-templates-vector-54215483.jpg" alt="Professional team" class="w-full h-80 object-cover rounded-xl shadow-lg">
                     </div>
                     <!-- Floating Stats -->
-                    <div class="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">15+</div>
-                            <div class="text-sm text-gray-600">Years Experience</div>
-                        </div>
-                    </div>
+                     
                 </div>
             </div>
 
@@ -361,12 +470,7 @@
                         <p class="text-lg text-gray-600 leading-relaxed">
                             Financial management can be complex and time-consuming, especially when you're busy building your business. Our dedicated team takes care of the details, working efficiently behind the scenes.
                         </p>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                <i class="fas fa-check text-green-600"></i>
-                            </div>
-                            <span class="text-gray-700 font-medium">99% Accuracy Guaranteed</span>
-                        </div>
+                         
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                                 <i class="fas fa-clock text-blue-600"></i>
@@ -663,16 +767,139 @@
         </div>
     </section>
 
+    <div id="contact" class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Have questions or feedback? We'd love to hear from you!</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-gradient-to-br from-blue-500 to-blue-600 p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-6">Get in touch</h2>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="mr-4 mt-1 text-blue-200">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Our Location</h3>
+                            <p class="text-blue-100">303. Moin near Mithakhali Ashram road Navrangpura Ahmedabad Pin code:- 380009</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="mr-4 mt-1 text-blue-200">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Phone Number</h3>
+                            <p class="text-blue-100">+91 6351913137</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="mr-4 mt-1 text-blue-200">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Email Address</h3>
+                            <p class="text-blue-100">contact@lixance.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-200 hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            
+                            <a href="#" class="text-blue-200 hover:text-white transition duration-300">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 p-8">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                            Send via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Format the message for WhatsApp
+            const whatsappMessage = `New Contact Form Submission:%0A%0A` +
+                                   `Name: ${name}%0A` +
+                                   `Email: ${email}%0A` +
+                                   `Phone: ${phone}%0A` +
+                                   `Message: ${message}`;
+            
+            // Your WhatsApp number
+            const whatsappNumber = '+916351913137';
+            
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+            
+            // Optional: Reset the form after submission
+            this.reset();
+            
+            // Optional: Show a success message
+            alert('Your message has been sent successfully via WhatsApp!');
+        });
+    </script>
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16 ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mr-3">
-                            <i class="fas fa-chart-line text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Lixance</h3>
+                         <img style="max-height: 60px;" src="/logo/logo.png" alt="">
                     </div>
                     <p class="text-gray-400 mb-6 max-w-md">
                         Smart, modern accounting solutions customized for business owners, startups, accountants, and CPAs. Your trusted partner for financial success.
@@ -681,9 +908,7 @@
                         <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        
                         <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-accent transition duration-300">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
@@ -706,13 +931,19 @@
                     <ul class="space-y-3 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-3 text-accent"></i>
-                            <span>+91 63519 1313</span>
+                            <span>+916351913137</span>
                         </li>
                          
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-3 text-accent"></i>
-                            <span>303. Moin near   
-Mithakhali Navrangpura 
+                            <span>303. Moin near
+Mithakhali  Ashram road Navrangpura
+Ahmedabad Pin code:- 380009
+</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-accent"></i>
+                             <span>contact@lixance.com
 </span>
                         </li>
                          
@@ -733,6 +964,55 @@ Mithakhali Navrangpura
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Main Carousel
+        const swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            loop: true,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // Thumbnail Carousel
+        const swiperThumbs = new Swiper(".mySwiperThumbs", {
+            spaceBetween: 20,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+
+        // Link main carousel with thumbnails
+        swiper.controller.control = swiperThumbs;
+        swiperThumbs.controller.control = swiper;
+    </script>
+
+
+
     <script src="script.js"></script>
+    
+  
 </body>
 </html>
